@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         characterListRecyclerView.layoutManager = LinearLayoutManager(this)
-        characterListRecyclerView.adapter = CharacterAdapter(dataList)
+        characterListRecyclerView.adapter = CharacterAdapter(this, dataList)
         getCharacters()
     }
 
@@ -39,7 +39,6 @@ class MainActivity : AppCompatActivity() {
                 if (characterdata != null) {
                     dataList.addAll(characterdata?.results)
                     characterListRecyclerView.adapter?.notifyDataSetChanged()
-
                     Log.i("Test", response?.body().toString())
                 }
             }

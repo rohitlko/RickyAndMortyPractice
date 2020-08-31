@@ -16,7 +16,9 @@ import retrofit2.Callback
 import retrofit2.Response
 
 
-val dataList = ArrayList<Character>()
+//val dataList = ArrayList<Character>()
+val dataList = mutableListOf<Character>()
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
